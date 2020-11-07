@@ -1,0 +1,98 @@
+Session1 Git & Git Hub
+
+Git+Github=better workflow
+
+git --version
+ls -lart
+mkdir temp
+cd temp/
+git init
+ls -lart
+git status
+echo "First File" > Readme.txt (Creates 1 file and writes text in file)
+git status (Untracked files are those files, which are not part of version control system)
+cat Readme.txt
+git status
+git add .(text file got added to version control system and will be tracked)
+git status
+
+git config --global user.name "accenvikas"
+git config --global user.email "nice.vikas0@gmail.com"
+git commit -m "First Commit" (-m : providing information for commit message)
+git log
+git show c9c53f2a3152ac492e9af2c4846a869e5fc0c87e(commit ID)
+clear
+git status
+
+echo "Second file" >> Readme.txt
+cat Readme.txt
+git status
+
+git reset --hard (will rollback changes into local repository)
+cat "Readme.txt"
+git status
+
+Session3 Git & Git Hub
+
+1.) Git hub: https://github.com/  
+(create 1 public repo - gitreponew)
+2.) Bit bucket
+3.) Git lab
+
+git remote -v
+push an existing repository from the command line
+git remote add origin https://github.com/accenvikas/gitreponew.git
+git remote -v
+git push origin master
+(after pushing the code, If you want to make any modification then you can do using git command or using GUI)
+go to Settings in git hub and explore.
+
+Maven and Jenkins
+Maven - it is a build automation tool.
+create a AWS account and create Virtual machine from EC2. From virtual machine, we'll proceed to Jenkins.
+
+place personal.pem in Desktop
+ssh -i "personal.pem" ubuntu@ec2-13-59-149-147.us-east-2.compute.amazonaws.com
+ssh -i personal.pem ubuntu@13.59.149.147
+ssh -i personal.pem ubuntu@18.216.42.221
+
+
+https://pkg.jenkins.io/debian-stable/ (install jenkins in vm and below command is updated in such a way that execution happens smoothly)
+sudo su (to become root user.https://itsfoss.com/root-user-ubuntu/)
+sudo -i (The sudo command allows you to simulate a root login shell with this command)
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+echo "deb https://pkg.jenkins.io/debian-stable binary/" > /etc/apt/sources.list.d/jenkins.list
+apt update
+apt-get update
+apt install openjdk-8-jdk
+apt-get install jenkins (apt install jenkins)
+service jenkins status
+
+curl wgetip.com
+18.216.42.221 8080 (put http://18.216.42.221:8080 in browser. Public IP address of VM and can get from AWS console also. in browser to unlock jenkins)
+cat /var/lib/jenkins/secrets/initialAdminPassword (to get password - 3f652eaaf3234c9fbeeaa74276548526)
+click on suggested plugins
+
+11/7/2020
+Flow of course:
+Linux Basic
+Ansible
+Docker
+Kubernate
+AWS
+Terraform
+Maven
+Jenkins
+
+vijayprabhu.cs@gmail.com
+https://github.com/vijayprabhu04/DevOps_Documents.git
+
+
+ cd/your project directory
+
+ 1) git init
+ 2) git add . or git add ['filename']
+ 3) git commit -m "My first File"
+ 4) git remote add origin https://github.com/yourusername/your-repo-name.git
+ 5) git pull origin master
+ 6) git push origin master
